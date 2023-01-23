@@ -1,0 +1,12 @@
+<h1>Add Product</h1>
+<form #addProducts="ngForm" (ngSubmit)=" add_products(addProducts)">
+    <mat-form-field appearance="fill" *ngFor="let formfield of formFields">
+        <mat-label>{{formfield}}</mat-label>
+        <input matInput type="text" name="formfield" ngModel required >
+        <mat-error *ngIf="!addProducts.valid">
+           Please fill out {{ formfield }} as it is required!
+          </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" [disabled]="!addProducts.valid">Submit</button>
+</form>

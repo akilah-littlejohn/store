@@ -1,0 +1,18 @@
+.mat_chips_container {
+    margin: 1em;
+    width: fit-content;
+    background-color: #eee;
+    padding: 1em;
+
+}
+
+.list_container {
+    margin: 1em;
+}
+
+td, th {
+    text-align: left;
+    margin:13px;
+    padding:3px
+  
+  }
