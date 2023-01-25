@@ -1,0 +1,27 @@
+<section class="container">
+    <mat-form-field appearance="fill">
+        <mat-label>Sort by price</mat-label>
+        <mat-select>
+          <mat-option value="price" (click)="sortByPrice()">High to Low</mat-option>
+          <mat-option value="price" (click)="sortByPriceLow()">Low to High</mat-option>
+        </mat-select>
+      </mat-form-field>
+    
+      <table matSort (matSortChange)="sortData($event)">
+    
+        <tr>
+            <th></th>
+          <th mat-sort-header="price">Price</th>
+        </tr>
+    
+        <tr *ngFor="let product of  sortedProducts">
+    
+          <td [routerLink]="['/product', product.id]">{{product.title}},</td>
+          <td [routerLink]="['/product', product.id]">{{product.price}}</td>
+          <td> <button mat-raised-button color="primary" (click)="deleteById(product.id)"><mat-icon>delete</mat-icon>remove
+            </button>
+          </td>
+    
+        </tr>
+      </table>
+</section>

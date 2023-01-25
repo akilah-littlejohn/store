@@ -15,9 +15,9 @@ export class AddProductComponent {
     "Category",
     "Image"
   ]
-  constructor(private router:Router){}
-  add_products(form:NgForm){
-    if (form.valid){
+  constructor(private router: Router) { }
+  add_products(form: NgForm) {
+    if (form.valid) {
       this.router.navigate(['/products']);
     }
   }

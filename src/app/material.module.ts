@@ -6,6 +6,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatChipsModule } from '@angular/material/chips';
 import {MatCardModule} from '@angular/material/card';
 import {MatSortModule} from '@angular/material/sort';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -19,7 +20,8 @@ import {MatSortModule} from '@angular/material/sort';
     MatChipsModule,
     MatCardModule,
     MatSelectModule,
-    MatSortModule
+    MatSortModule,
+    MatIconModule
   ],
   exports: [
   
@@ -30,7 +32,8 @@ import {MatSortModule} from '@angular/material/sort';
     MatChipsModule,
     MatCardModule,
     MatSelectModule,
-    MatSortModule
+    MatSortModule,
+    MatIconModule
   ]
 })
 export class MaterialModule { }

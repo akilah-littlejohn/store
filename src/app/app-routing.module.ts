@@ -6,7 +6,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ElectronicsComponent } from './components/electronics/electronics.component';
 import { JewelryComponent } from './components/jewelry/jewelry.component';
 import { MensClothingComponent } from './components/mens-clothing/mens-clothing.component';
-import { WomensClothingComponent } from './womens-clothing/womens-clothing.component';
+import { WomensClothingComponent } from './components/womens-clothing/womens-clothing.component';
 
 const routes: Routes = [
   { path: 'products', component:ProductListComponent,

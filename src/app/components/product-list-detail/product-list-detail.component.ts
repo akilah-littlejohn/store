@@ -10,7 +10,7 @@ import { ApiService } from 'src/app/services/api.service';
 export class ProductListDetailComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private apiService: ApiService) { }
   product_id: any;
-  product_data:any;
+  product_data: any;
 
   ngOnInit(): void {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
@@ -18,10 +18,8 @@ export class ProductListDetailComponent implements OnInit {
 
     this.product_data = this.apiService.getProductById(this.product_id).subscribe(
       data => this.product_data = data
+  )
 
-      
-    )
-   
 
 
   }

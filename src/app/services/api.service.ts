@@ -14,19 +14,21 @@ export class ApiService {
   getProducts() {
     return this.http.get(`${this.store_url}${this.products}`)    
 }
-
 getAllcatergories(){
   return this.http.get(`${this.store_url}${this.products}/${this.categories}`)
 
 }
-
 getSingleCategory(category:string){
   return this.http.get(`${this.store_url}${this.products}/category/${category}/`)
 }
 
-getProductById(productId:string){
+getProductById(productId:number){
   return this.http.get(`${this.store_url}${this.products}/${productId}`)
   
+}
+
+deleteProductById(productId?:any){
+  return this.http.delete(`${this.store_url}${this.products}/${productId}`)
 }
 }
 

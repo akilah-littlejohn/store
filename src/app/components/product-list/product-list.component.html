@@ -1,50 +1,13 @@
-
-<h1>Product List - {{ categoryTitle }}</h1>
+<h1 class="list_container">Product List {{ categoryTitle }}</h1>
 <mat-chip-listbox class="mat_chips_container container" aria-label="Categories">
-    <mat-chip *ngFor="let category of categories" [routerLink]="[category]" (click)="goToCategory(category)">{{ category }}</mat-chip>
+  <mat-chip *ngFor="let category of categories | async" (click)="goToCategory(category)">{{
+    category
+    }}</mat-chip>
 </mat-chip-listbox>
-<router-outlet></router-outlet>
 
 
-
+<router-outlet *ngIf="filterProducts"></router-outlet>
 
 <section class="list_container" *ngIf="!filterProducts">
-    <mat-form-field  appearance="fill">
-        <mat-label>Sort by price</mat-label>
-        <mat-select>
-          <mat-option value="High" >High</mat-option>
-          <mat-option value="Low">Low</mat-option>
-        </mat-select>
-      </mat-form-field>
-    <table>
-        <tr>
-            <th>Title</th>
-            <th>Price</th>
-        </tr>
-        <tr *ngFor="let product of products" [routerLink]="['/product', product.id]" >
-          <td>{{product.title}},</td>
-          <td>{{product.price}}</td> 
-        </tr>
-      </table>
+  <app-table [sortedProducts]="sortedProducts"></app-table>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -15,6 +15,8 @@ import { ProductListDetailComponent } from './components/product-list-detail/pro
 import { ElectronicsComponent } from './components/electronics/electronics.component';
 import { JewelryComponent } from './components/jewelry/jewelry.component';
 import { MensClothingComponent } from './components/mens-clothing/mens-clothing.component';
+import { TableComponent } from './components/table/table.component';
+import { WomensClothingComponent } from './components/womens-clothing/womens-clothing.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { MensClothingComponent } from './components/mens-clothing/mens-clothing.
     ElectronicsComponent,
     JewelryComponent,
     MensClothingComponent,
+    TableComponent,
+    WomensClothingComponent,
     
     
   

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-electronics',
@@ -8,12 +9,24 @@ import { Component, OnInit, Input } from '@angular/core';
 
 
 export class ElectronicsComponent implements OnInit {
-  
-  @Input()jewelryProducts:any;
-  constructor(){}
 
-ngOnInit(): void {
-  
-}
+  _product_data: any
+  sortedProducts: any[]
+  processDataSort: any
+  constructor(private apiServe: ApiService) { }
+
+  ngOnInit(): void {
+    this.processDataSort = this.apiServe.getSingleCategory('electronics').subscribe(
+      (data) => {
+        this._product_data = JSON.stringify(data);
+        this.sortedProducts = JSON.parse(this._product_data);
+        this.sortedProducts.slice()
+      }
+    )
+
+
+  }
+
+
 
 }
